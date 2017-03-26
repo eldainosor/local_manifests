@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remove-project name="proprietary_vendor_google_devices" />
+  <remove-project name="proprietary_vendor_huawei" />
+  <remove-project name="proprietary_vendor_lge" />
+  <remove-project name="proprietary_vendor_moto" />
+  <remove-project name="android_kernel_huawei_angler" />
+  <remove-project name="android_kernel_lge_bullhead" />
+  <remove-project name="android_kernel_moto_shamu" />
+  <remove-project name="android_kernel_google_dragon" />
+  <remove-project name="android_kernel_google_marlin" />
+  <remove-project name="android_device_huawei_angler" />
+  <remove-project name="android_device_lge_bullhead" />
+  <remove-project name="android_device_moto_shamu" />
+  <remove-project name="android_device_google_dragon" />
+  <remove-project name="android_device_google_marlin" />
+  <remove-project name="android_build" />
+  <remove-project name="android_vendor_pure" />
+  <remove-project name="android_frameworks_av" />
+  <remove-project name="android_frameworks_native" />
+  <remove-project name="android_frameworks_base" />
+  <remove-project name="android_packages_apps_Settings" />
+  <remove-project name="android_packages_apps_PureSettings" />
+  <remove-project name="android_packages_services_Telephony" />
+  <remove-project name="android_system_core" />
+  <remove-project name="android_system_sepolicy" />
+  <remove-project name="android_system_extras" />
+  <remove-project name="android_build_kati" />
+  <remove-project name="android_bootable_recovery" />
+  <remove-project name="platform/frameworks/opt/telephony" />
+  <remove-project name="platform/system/vold" />
+  <remove-project name="platform/system/media" />
+  <remove-project name="platform/system/netd" />
+  <remove-project name="platform/system/bt" />
+  <remove-project name="platform/hardware/libhardware" />
+  <remove-project name="platform/hardware/libhardware_legacy" />
+  <remove-project name="platform/hardware/ril" />
+  <remove-project name="platform/hardware/qcom/audio" />
+  <remove-project name="platform/hardware/qcom/bt" />
+  <remove-project name="platform/hardware/qcom/camera" />
+  <remove-project name="platform/hardware/qcom/display" />
+  <remove-project name="platform/hardware/qcom/gps" />
+  <remove-project name="platform/hardware/qcom/keymaster" />
+  <remove-project name="platform/hardware/qcom/media" />
+  <remove-project name="platform/hardware/qcom/wlan" />
+  <remove-project name="platform/packages/apps/Camera2" />
+  <remove-project name="platform/external/tinycompress" />
+  <remove-project name="platform/external/tinyalsa" />
+  <remove-project name="platform/external/wpa_supplicant_8" />
+  <remove-project name="platform/external/e2fsprogs" />
+  <remove-project name="platform/external/f2fs-tools" />
+  <remove-project name="platform/external/libnfc-nci" />
+  <remove-project name="platform/external/llvm" />
+  <remove-project name="platform/external/skia" />
+  <remove-project name="platform/prebuilts/clang/darwin-x86/host/3.6" />
+  <remove-project name="platform/prebuilts/clang/linux-x86/host/3.6" />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" />
+  <remove-project name="platform/prebuilts/misc" />
+  <remove-project name="platform/prebuilts/ninja/darwin-x86" />
+  <remove-project name="platform/prebuilts/ninja/linux-x86" />
+  <remove-project name="platform/build/blueprint" />
+  <remove-project name="platform/build/soong" />
+  <remove-project name="platform/art" />
+  <remove-project name="platform/bionic" />
+  <remove-project name="platform/development" />
+  <remove-project name="platform/libcore" />
+  <remote name="pure-moto8916"
+           fetch="https://github.com/PureNexus-Moto8916/" /> 
+  <remote name="du"
+           fetch="https://github.com/DirtyUnicorns/" />
+
+  <!-- Pure Repo's -->
+  <project path="build" name="android_build" groups="pdk,tradefed" remote="pure-moto8916" revision="n-mr1-caf" >
+  <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+  <project path="vendor/pure" name="android_vendor_pure" remote="pure-moto8916" revision="n-mr1-caf" />
+  <project path="build/blueprint" name="android_build_blueprint" remote="du" revision="n7x" />
+  <project path="build/kati" name="android_build_kati" remote="du" revision="n7x" />
+  <project path="build/soong" name="android_build_soong" remote="du" revision="n7x" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="art" name="android_art" remote="du" revision="n7x" />
+  <project path="bionic" name="android_bionic" remote="du" revision="n7x" />
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="du" revision="n7x" />
+  <project path="development" name="android_development" remote="du" revision="n7x" />
+  <project path="libcore" name="android_libcore" remote="du" revision="n7x" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/av" name="android_frameworks_av" remote="pure-moto8916" revision="n-mr1-caf" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="pure-moto8916" revision="n-mr1-caf" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="pure-moto8916" revision="n-mr1-caf" />
+  <project path="packages/apps/PureSettings" name="android_packages_apps_PureSettings" remote="pure-moto8916" revision="n-mr1-caf" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="pure-moto8916" revision="n-mr1-caf" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="du" revision="n7x-caf" />
+
+  <!-- System -->
+  <project path="system/core" name="android_system_core" remote="pure-moto8916" revision="n-mr1-caf" />
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="pure-moto8916" revision="n-mr1-caf" />
+  <project path="system/vold" name="android_system_vold" remote="pure-moto8916" revision="n-mr1-caf" />
+  <project path="system/bt" name="android_system_bt" remote="pure-moto8916" revision="n-mr1-caf" />
+  <project path="system/extras" name="android_system_extras" remote="du" revision="n7x-caf" />
+  <project path="system/media" name="android_system_media" remote="du" revision="n7x-caf" />
+  <project path="system/netd" name="android_system_netd" remote="du" revision="n7x-caf" />
+  <project path="system/qcom" name="android_system_qcom" remote="du" revision="n7x-caf" />
+
+  <!-- Hardware -->
+  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="du" revision="n7x-caf" />
+  <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="du" revision="n7x-caf" />
+  <project path="hardware/qcom/audio/default" name="android_hardware_qcom_audio" remote="du" revision="n7x-caf" />
+  <project path="hardware/qcom/bt" name="android_hardware_qcom_bt" remote="du" revision="n7x-caf" />
+  <project path="hardware/qcom/camera" name="android_hardware_qcom_camera" remote="du" revision="n7x-caf" />
+  <project path="hardware/qcom/fm" name="android_hardware_qcom_fm" remote="du" revision="n7x-caf" />
+  <project path="hardware/qcom/gps" name="android_hardware_qcom_gps" remote="du" revision="n7x" />
+  <project path="hardware/qcom/keymaster" name="android_hardware_qcom_keymaster" remote="du" revision="n7x-caf" />
+  <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="du" revision="n7x-caf" />
+  <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" remote="du" revision="n7x" />
+  <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="du" revision="n7x-caf" />
+  <project path="hardware/ril" name="android_hardware_ril" remote="du" revision="n7x-caf" />
+
+  <!-- Apps -->
+  <project path="packages/apps/FMRadio" name="android_packages_apps_FMRadio" remote="du" revision="n7x-caf" />
+  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="pure-moto8916" revision="n-mr1-caf" />
+  <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="du" revision="n7x" />
+
+  <!-- External -->
+  <project path="external/tinycompress" name="android_external_tinycompress" groups="pdk" remote="du" revision="n7x" />
+  <project path="external/libnetfilter_conntrack" name="android_external_libnetfilter_conntrack" remote="du" revision="n7x-caf" />
+  <project path="external/libnfnetlink" name="android_external_libnfnetlink" remote="du" revision="n7x-caf" />
+  <project path="external/tinyalsa" name="android_external_tinyalsa" groups="pdk" remote="du" revision="n7x-caf" />
+  <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" groups="pdk" remote="du" revision="n7x-caf" />
+  <project path="external/e2fsprogs" name="android_external_e2fsprogs" groups="pdk" remote="du" revision="n7x-caf" />
+  <project path="external/exfat" name="android_external_exfat" remote="du" revision="n7x-caf" />
+  <project path="external/f2fs-tools" name="android_external_f2fs-tools" remote="du" revision="n7x-caf" />
+  <project path="external/fuse" name="android_external_fuse" remote="du" revision="n7x-caf" />
+  <project path="external/libnfc-nci" name="android_external_libnfc-nci" remote="du" revision="n7x-caf" />
+  <project path="external/llvm" name="android_external_llvm" remote="du" revision="n7x" />
+  <project path="external/skia" name="android_external_skia" remote="du" revision="n7x" />
+
+  <!-- Prebuilts and Toolchains -->
+  <project path="prebuilts/build-tools" name="android_prebuilts_build-tools" remote="du" revision="n7x" />
+  <project path="prebuilts/misc" name="android_prebuilts_misc" remote="du" revision="n7x" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="arm-eabi-4.8" remote="du" revision="n7x" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" remote="du" revision="n7x" />
+
+  <!-- CAF  -->
+  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="pure-moto8916" revision="n-mr1-caf" />
+  <project path="external/ant-wireless/ant_native" name="android_external_ant-wireless_ant_native" remote="du" revision="n7x-caf" />
+  <project path="external/ant-wireless/ant_service" name="android_external_ant-wireless_ant_service" remote="du" revision="n7x-caf" />
+  <project path="external/ant-wireless/antradio-library" name="android_external_ant-wireless_antradio-library" remote="du" revision="n7x-caf" />
+  <project path="device/qcom/common" name="android_device_qcom_common" remote="du" revision="n7x-caf" />
+  <project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" remote="du" revision="n7x-caf" />
+  <project path="vendor/qcom/opensource/dpm" name="android_vendor_qcom_opensource_dpm" remote="du" revision="n7x-caf" />
+  <project path="vendor/qcom/opensource/time-services" name="android_vendor_qcom_opensource_time-services" remote="du" revision="n7x-caf" />
+  <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="du" revision="n7x-caf" />
+
+  <!-- Motorola MSM8916 -->
+
+  <project path="hardware/qcom/audio-caf/msm8916" name="android_hardware_qcom_audio" remote="du" revision="n7x-caf-8916" />
+  <project path="hardware/qcom/media-caf/msm8916" name="android_hardware_qcom_media" remote="du" revision="n7x-caf-8916" />
+  <project path="hardware/qcom/display-caf/msm8916" name="android_hardware_qcom_display" remote="du" revision="n7x-caf-8916" />
+  <project path="device/motorola/osprey" name="android_device_motorola_osprey" remote="pure-moto8916" revision="n-mr1-caf" />
+  <project path="device/motorola/msm8916-common" name="android_device_motorola_msm8916-common" remote="pure-moto8916" revision="n-mr1-caf" />
+  <project path="kernel/motorola/msm8916" name="desaishivam26/android_kernel_motorola_msm8916" remote="github" revision="cm-14.1" />
+  <project path="external/bson" name="android_external_bson" remote="du" revision="n7x-caf" />
+  <project path="vendor/motorola" name="proprietary_vendor_motorola" remote="pure-moto8916" revision="n-mr1-caf" />
+  <project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings" remote="github" revision="cm-14.1" />
+</manifest>
