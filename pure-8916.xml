@@ -27,6 +27,7 @@
   <remove-project name="android_system_extras" />
   <remove-project name="android_build_kati" />
   <remove-project name="android_bootable_recovery" />
+  <remove-project name="vendor_gapps" />
   <remove-project name="platform/frameworks/opt/telephony" />
   <remove-project name="platform/system/vold" />
   <remove-project name="platform/system/media" />
@@ -43,7 +44,6 @@
   <remove-project name="platform/hardware/qcom/keymaster" />
   <remove-project name="platform/hardware/qcom/media" />
   <remove-project name="platform/hardware/qcom/wlan" />
-  <remove-project name="platform/packages/apps/Camera2" />
   <remove-project name="platform/external/tinycompress" />
   <remove-project name="platform/external/tinyalsa" />
   <remove-project name="platform/external/wpa_supplicant_8" />
@@ -70,11 +70,13 @@
            fetch="https://github.com/PureNexus-Moto8916/" /> 
   <remote name="du"
            fetch="https://github.com/DirtyUnicorns/" />
-
+  <remote name="gitlab-jhenrique09"
+           fetch="https://gitlab.com/jhenrique09/" />
   <!-- Pure Repo's -->
   <project path="build" name="android_build" groups="pdk,tradefed" remote="pure-moto8916" revision="n-mr1-caf" >
   <copyfile src="core/root.mk" dest="Makefile" />
   </project>
+  <project path="vendor/gapps" name="pure_vendor_gapps" remote="gitlab-jhenrique09" revision="n-mr1" />
   <project path="vendor/pure" name="android_vendor_pure" remote="pure-moto8916" revision="n-mr1-caf" />
   <project path="build/blueprint" name="android_build_blueprint" remote="du" revision="n7x" />
   <project path="build/kati" name="android_build_kati" remote="du" revision="n7x" />
@@ -121,9 +123,9 @@
   <project path="hardware/ril" name="android_hardware_ril" remote="du" revision="n7x-caf" />
 
   <!-- Apps -->
-  <project path="packages/apps/FMRadio" name="android_packages_apps_FMRadio" remote="du" revision="n7x-caf" />
   <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="pure-moto8916" revision="n-mr1-caf" />
-  <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="du" revision="n7x" />
+  <project path="packages/apps/Snap" name="android_packages_apps_Snap" remote="pure-moto8916" revision="n-mr1-caf" />
+  <project path="packages/apps/FMRadio" name="android_packages_apps_FMRadio" remote="du" revision="n7x-caf" />
 
   <!-- External -->
   <project path="external/tinycompress" name="android_external_tinycompress" groups="pdk" remote="du" revision="n7x" />
@@ -157,7 +159,6 @@
   <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="du" revision="n7x-caf" />
 
   <!-- Motorola MSM8916 -->
-
   <project path="hardware/qcom/audio-caf/msm8916" name="android_hardware_qcom_audio" remote="du" revision="n7x-caf-8916" />
   <project path="hardware/qcom/media-caf/msm8916" name="android_hardware_qcom_media" remote="du" revision="n7x-caf-8916" />
   <project path="hardware/qcom/display-caf/msm8916" name="android_hardware_qcom_display" remote="du" revision="n7x-caf-8916" />
