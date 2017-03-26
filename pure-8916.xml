@@ -162,10 +162,22 @@
   <project path="hardware/qcom/audio-caf/msm8916" name="android_hardware_qcom_audio" remote="du" revision="n7x-caf-8916" />
   <project path="hardware/qcom/media-caf/msm8916" name="android_hardware_qcom_media" remote="du" revision="n7x-caf-8916" />
   <project path="hardware/qcom/display-caf/msm8916" name="android_hardware_qcom_display" remote="du" revision="n7x-caf-8916" />
-  <project path="device/motorola/osprey" name="android_device_motorola_osprey" remote="pure-moto8916" revision="n-mr1-caf" />
   <project path="device/motorola/msm8916-common" name="android_device_motorola_msm8916-common" remote="pure-moto8916" revision="n-mr1-caf" />
   <project path="kernel/motorola/msm8916" name="desaishivam26/android_kernel_motorola_msm8916" remote="github" revision="cm-14.1" />
-  <project path="external/bson" name="android_external_bson" remote="du" revision="n7x-caf" />
+  <project path="kernel/lenovo/msm8916" name="LineageOS/android_kernel_lenovo_msm8916" remote="github" revision="cm-14.1" />
+
+  <!-- Motorola/Lenovo Vendor -->
   <project path="vendor/motorola" name="proprietary_vendor_motorola" remote="pure-moto8916" revision="n-mr1-caf" />
+  <project path="vendor/lenovo" name="TheMuppets/proprietary_vendor_lenovo" remote="github" revision="cm-14.1" />
+
+  <!-- Dependencies -->
+  <project path="external/bson" name="android_external_bson" remote="du" revision="n7x-caf" />
+  <project path="external/stlport" name="LineageOS/android_external_stlport" remote="github" revision="cm-14.1" />
   <project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings" remote="github" revision="cm-14.1" />
+
+  <!-- Osprey -->
+  <project path="device/motorola/osprey" name="android_device_motorola_osprey" remote="pure-moto8916" revision="n-mr1-caf" />
+
+  <!-- A6020 -->
+  <project path="device/lenovo/A6020" name="android_device_lenovo_A6020" remote="pure-moto8916" revision="n-mr1-caf" />
 </manifest>
