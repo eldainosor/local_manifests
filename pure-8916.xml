@@ -76,7 +76,7 @@
   <project path="build" name="android_build" groups="pdk,tradefed" remote="pure-moto8916" revision="n-mr1-caf" >
   <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="vendor/gapps" name="pure_vendor_gapps" remote="gitlab-jhenrique09" revision="n-mr1-8916" />
+  <project path="vendor/gapps" name="pure_vendor_gapps" remote="gitlab-jhenrique09" revision="n-mr1" />
   <project path="vendor/pure" name="android_vendor_pure" remote="pure-moto8916" revision="n-mr1-caf" />
   <project path="build/blueprint" name="android_build_blueprint" remote="du" revision="n7x" />
   <project path="build/kati" name="android_build_kati" remote="du" revision="n7x" />
