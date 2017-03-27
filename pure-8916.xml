@@ -173,6 +173,8 @@
   <!-- Dependencies -->
   <project path="external/bson" name="android_external_bson" remote="du" revision="n7x-caf" />
   <project path="external/stlport" name="LineageOS/android_external_stlport" remote="github" revision="cm-14.1" />
+  <project path="external/boringssl-compat" name="LineageOS/android_external_sony_boringssl-compat" remote="github" revision="cm-14.1" />
+  <project path="external/connectivity" name="LineageOS/android_external_connectivity" remote="github" revision="cm-14.1" />
   <project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings" remote="github" revision="cm-14.1" />
 
   <!-- Osprey -->
