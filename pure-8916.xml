@@ -182,4 +182,7 @@
 
   <!-- A6020 -->
   <project path="device/lenovo/A6020" name="android_device_lenovo_A6020" remote="pure-moto8916" revision="n-mr1-caf" />
+  
+  <!-- Surnia -->
+  <project path="device/motorola/surnia" name="android_device_motorola_surnia" remote="pure-moto8916" revision="n-mr1-caf" />
 </manifest>
